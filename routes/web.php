@@ -28,7 +28,6 @@ Route::get('/userget', function () {
 });
 Route::get('/pagination',function(){
     $users =  User::paginate(10) ;
-    dd($users);
-    // return view('users',['users' => $users]);
+    return view('users',['users' => $users]);
 });
 
