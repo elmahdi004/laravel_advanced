@@ -31,3 +31,10 @@ Route::get('/pagination',function(){
     return view('users',['users' => $users]);
 });
 
+// --- retrieve user by slug 
+Route::get('/user/{user}',function(User $user){
+    return $user;
+})->missing(function(){
+    return abort(403,'NOT FOUND , PLEASE TRY AGAIN');
+});
+
