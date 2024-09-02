@@ -27,7 +27,8 @@ Route::get('/userget', function () {
     return Image::with('imageable')->get();
 });
 Route::get('/users',function(){
-    $users =  User::paginate(20) ;
-    return view('users',['users' => $users]);
+    $users =  User::paginate(10) ;
+    dd($users);
+    // return view('users',['users' => $users]);
 });
 
