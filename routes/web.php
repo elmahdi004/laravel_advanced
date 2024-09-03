@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use App\Models\Image;
 use App\Models\Post;
 use App\Models\User;
@@ -37,4 +38,7 @@ Route::get('/user/{user}',function(User $user){
 })->missing(function(){
     return abort(403,'NOT FOUND , PLEASE TRY AGAIN');
 });
+
+// --- Route redirect 
+Route::redirect('/elmahdi','/');
 
